@@ -20,4 +20,17 @@
 
 ---
 
+## 2026-06-16 — Estudo de Python puro: produtividade simples e escopo
+
+### Objetivo da microentrega
+
+Reaprender fundamentos de Python usando um problema real do AgroRock: calcular produtividade simples a partir do peso colhido, área colhida e peso da saca.
+
+Nesta etapa, o foco foi entender a lógica em Python puro antes de integrar com FastAPI.
+
+### Arquivo trabalhado
+
+```text
+backend/teste_calculos.py
+
 _Nota: Este diário serve de memória para o desenvolvedor e contexto para a IA._
