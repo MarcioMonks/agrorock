@@ -20,20 +20,42 @@
 
 ---
 
-## 2026-06-16 — Estudo de Python puro: produtividade simples e escopo
+## [16/06/2026] - Base do Projeto, Primeira API e Primeira Função Agronômica
 
-### Objetivo da microentrega
+### O que foi feito:
+- Criada a estrutura inicial do projeto AgroRock / NexoAgro.
+- Configurado o back-end com Python, ambiente virtual `.venv`, FastAPI e Uvicorn.
+- Criado o arquivo principal da API em `backend/app/main.py`.
+- Implementadas as primeiras rotas básicas: `/` e `/health`.
+- Testada a API localmente pelo navegador.
+- Configurado o Git e realizado envio inicial para o GitHub.
+- Criados arquivos de documentação do projeto, incluindo `README.md`, `GEMINI.md` e contexto para IA.
+- Criada a primeira função agronômica em Python puro: cálculo de produtividade simples.
+- Praticados conceitos de função, parâmetros, retorno, validação, dicionários, `round()`, type hints e escopo.
+- Testado o comportamento de variáveis locais fora da função.
+- Aprendido o uso de `if __name__ == "__main__"` para testes manuais.
+- Movida a função de produtividade para `backend/app/services/calculators.py`.
+- Criado o arquivo `backend/teste_calculos.py` para testar a função importada do service.
+- Criado o router inicial de calculadoras em `backend/app/routers/calculators.py`.
 
-Reaprender fundamentos de Python usando um problema real do AgroRock: calcular produtividade simples a partir do peso colhido, área colhida e peso da saca.
+### O que aprendi:
+- **Ambiente Python:** entendi a diferença entre Python instalado, ambiente virtual e dependências do projeto.
+- **FastAPI:** entendi como criar uma API simples e testar uma rota no navegador.
+- **Uvicorn:** aprendi que o servidor precisa ser rodado dentro da pasta correta (`backend`) para encontrar o módulo `app`.
+- **Git:** entendi melhor a diferença entre `commit` e `push`.
+- **Funções:** aprendi a transformar uma regra agronômica em uma função reutilizável.
+- **Validação com `if` e `or`:** entendi como barrar valores inválidos antes de fazer o cálculo.
+- **Dicionários:** entendi por que retornar dados nomeados ajuda a futura API e o front-end.
+- **Escopo:** entendi que variáveis criadas dentro de uma função são locais e não existem diretamente fora dela.
+- **`if __name__ == "__main__"`:** aprendi a separar teste manual de código reutilizável.
+- **Imports e services:** entendi que a lógica de negócio deve ficar em `services`, enquanto os testes e rotas apenas usam essa lógica.
 
-Nesta etapa, o foco foi entender a lógica em Python puro antes de integrar com FastAPI.
+### Frases da lição:
+> "Variável local morre dentro da função. Valor retornado atravessa a porteira."
 
-### Arquivo trabalhado
+> "A conta deve funcionar em Python puro antes de virar endpoint."
 
-```text
-backend/teste_calculos.py
-
-_Nota: Este diário serve de memória para o desenvolvedor e contexto para a IA._
+> "Service calcula. Router expõe. Main conecta."
 
 ## [17/06/2026] - Implementação do Primeiro Endpoint e Validação com Pydantic
 
