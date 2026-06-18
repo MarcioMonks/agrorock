@@ -5,6 +5,7 @@ from app.services.calculators import (
     calcular_produtividade_simples,
     calcular_volume_calda_simples,
     calcular_quantidade_produto_simples,
+    converter_metros_quadrados_para_hectares,
 )
 
 router = APIRouter()
@@ -31,6 +32,10 @@ class QuantidadeProdutoSimplesInput(BaseModel):
     )
 
 
+class ConverterMetrosQuadradosParaHectaresInput(BaseModel):
+    metros_quadrados: float = Field(gt=0, description="Área em metros quadrados")
+
+
 @router.post("/produtividade-simples")
 def post_calcular_produtividade_simples(data: ProdutividadeSimplesInput):
     return calcular_produtividade_simples(
@@ -46,3 +51,10 @@ def post_calcular_volume_calda_simples(data: VolumeCaldaSimplesInput):
 @router.post("/quantidade-produto-simples")
 def post_calcular_quantidade_produto_simples(data: QuantidadeProdutoSimplesInput):
     return calcular_quantidade_produto_simples(data.area_ha, data.dose_por_ha)
+
+
+@router.post("/converter-metros-quadrados-para-hectares")
+def post_converter_metros_quadrados_para_hectares(
+    data: ConverterMetrosQuadradosParaHectaresInput,
+):
+    return converter_metros_quadrados_para_hectares(data.metros_quadrados)

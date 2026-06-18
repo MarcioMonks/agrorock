@@ -46,3 +46,15 @@ def calcular_quantidade_produto_simples(area_ha: float, dose_por_ha: float) -> d
     return {
         "quantidade_total_produto": round(quantidade_total_produto, 2),
     }
+
+
+# Conversor de m² para hectares
+
+
+def converter_metros_quadrados_para_hectares(metros_quadrados: float) -> dict:
+    if metros_quadrados <= 0:
+        return {"erro": "Informe um valor maior que zero."}
+
+    hectares = metros_quadrados / 10000
+
+    return {"hectares": round(hectares, 2)}
