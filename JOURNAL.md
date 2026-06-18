@@ -95,3 +95,22 @@
 
 ### Frase da lição:
 > "A primeira calculadora ensina o caminho. A segunda mostra que o caminho virou método."
+
+## [18/06/2026] - Conversor de m² para hectares
+
+### O que foi feito:
+- Criada a função `converter_metros_quadrados_para_hectares` no service de calculadoras.
+- Implementado o cálculo de conversão de metros quadrados para hectares.
+- Criado o modelo Pydantic `ConverterMetrosQuadradosParaHectaresInput`.
+- Criada a rota `POST /calculators/converter-metros-quadrados-para-hectares`.
+- Aplicada validação com `Field(gt=0)`.
+- Testado o endpoint pelo Swagger com entrada válida e inválida.
+
+### O que aprendi:
+- Reforcei a diferença entre entrada e saída de uma API.
+- Entendi que o modelo Pydantic deve representar apenas os dados que o cliente precisa enviar.
+- Reforcei o padrão service → router → endpoint → Swagger → teste.
+- Aprendi a identificar quando o Swagger ainda mostra um modelo antigo por arquivo não salvo, servidor não recarregado ou endpoint antigo.
+
+### Frase da lição:
+> "Hectare não entra nessa porteira. Hectare sai do cálculo."

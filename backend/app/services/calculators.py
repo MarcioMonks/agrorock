@@ -58,3 +58,15 @@ def converter_metros_quadrados_para_hectares(metros_quadrados: float) -> dict:
     hectares = metros_quadrados / 10000
 
     return {"hectares": round(hectares, 2)}
+
+
+# Conversor de hectares para m²
+
+
+def converter_hectares_para_metros_quadrados(hectares: float) -> dict:
+    if hectares <= 0:
+        return {"erro": "Informe um valor maior que zero."}
+
+    metros_quadrados = hectares * 10000
+
+    return {"metros_quadrados": round(metros_quadrados, 2)}
