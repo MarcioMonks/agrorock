@@ -32,3 +32,17 @@ def calcular_volume_calda_simples(
     return {
         "volume_total_litros": round(volume_total_litros, 2),
     }
+
+
+# Calculadora de Quantidade Total de Produto
+
+
+def calcular_quantidade_produto_simples(area_ha: float, dose_por_ha: float) -> dict:
+    if area_ha <= 0 or dose_por_ha <= 0:
+        return {"erro": "Os valores de entrada devem ser maiores que zero."}
+
+    quantidade_total_produto = area_ha * dose_por_ha
+
+    return {
+        "quantidade_total_produto": round(quantidade_total_produto, 2),
+    }

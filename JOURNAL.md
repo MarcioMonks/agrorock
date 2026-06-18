@@ -75,3 +75,23 @@
 
 ### Frase da lição:
 > "O Pydantic é o segurança da porteira. Se o dado não respeitar a física do campo, nem entra no galpão."
+
+## [17/06/2026] - Calculadora de Volume de Calda Simples
+
+### O que foi feito:
+- Criada a função `calcular_volume_calda_simples` no service `backend/app/services/calculators.py`.
+- Implementado o cálculo de volume total de calda a partir da área em hectares e do volume de calda em litros por hectare.
+- Criado o modelo Pydantic `VolumeCaldaSimplesInput`.
+- Criada a rota `POST /calculators/volume-calda-simples`.
+- Aplicada validação com `Field(gt=0)` nos campos de entrada.
+- Testado o endpoint pelo Swagger em `/docs`.
+- Realizado commit e push da entrega.
+
+### O que aprendi:
+- Reforcei o padrão `service → router → endpoint`.
+- Reforcei o uso de `BaseModel` e `Field(gt=0)` para validar entradas da API.
+- Entendi que uma nova calculadora deve nascer primeiro como lógica de negócio no service e depois ser exposta pela API.
+- Reforcei que nomes de variáveis precisam ser claros, especialmente em unidades como litros, hectares e kg.
+
+### Frase da lição:
+> "A primeira calculadora ensina o caminho. A segunda mostra que o caminho virou método."
