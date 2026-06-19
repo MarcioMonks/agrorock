@@ -114,3 +114,22 @@
 
 ### Frase da lição:
 > "Hectare não entra nessa porteira. Hectare sai do cálculo."
+
+## [18/06/2026] - Conversor de hectares para m²
+
+### O que foi feito:
+- Criada a função `converter_hectares_para_metros_quadrados` no service de calculadoras.
+- Implementado o cálculo de conversão de hectares para metros quadrados.
+- Criado o modelo Pydantic `ConverterHectaresParaMetrosQuadradosInput`.
+- Criada a rota `POST /calculators/converter-hectares-para-metros-quadrados`.
+- Aplicada validação com `Field(gt=0)`.
+- Testado o endpoint pelo Swagger com entrada válida e inválida.
+
+### O que aprendi:
+- Reforcei a diferença entre entrada e saída de uma função/API.
+- Entendi que a chave do retorno deve representar o resultado calculado, não necessariamente o valor de entrada.
+- Reforcei o padrão de criação de calculadoras no AgroRock/NexoAgro.
+- Consolidei o fluxo service → router → endpoint → Swagger → teste.
+
+### Frase da lição:
+> "Hectare entra, metro quadrado sai. A chave do retorno tem que contar o que saiu da máquina."
