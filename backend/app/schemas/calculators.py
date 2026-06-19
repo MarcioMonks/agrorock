@@ -7,6 +7,12 @@ class ProdutividadeSimplesInput(BaseModel):
     peso_saca_kg: float = Field(gt=0, description="Peso da saca em quilogramas")
 
 
+class ProdutividadeSimplesOutput(BaseModel):
+    kg_ha: float
+    t_ha: float
+    sacas_ha: float
+
+
 class VolumeCaldaSimplesInput(BaseModel):
     area_ha: float = Field(gt=0, description="Área em hectares")
     volume_calda_litros_ha: float = Field(

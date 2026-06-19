@@ -200,3 +200,20 @@
 
 ### Frase da lição:
 > "Swagger testa no olho. TestClient testa no automático."
+
+## [18/06/2026] - Teste de validação 422 na API
+
+### O que foi feito:
+- Adicionado teste automatizado para validar comportamento de erro na API.
+- Criado teste para `POST /calculators/volume-calda-simples` com `area_ha` igual a zero.
+- Verificado que o FastAPI/Pydantic retorna status `422` quando a entrada viola `Field(gt=0)`.
+- Executado o pytest com sucesso, totalizando 11 testes passando.
+
+### O que aprendi:
+- Entendi que testes de API devem cobrir tanto o caminho válido quanto o caminho inválido.
+- Reforcei que o Pydantic barra dados inválidos antes de chamar o service.
+- Aprendi que o status `422` representa erro de validação do contrato da API.
+- Entendi que testar erro esperado também faz parte da qualidade do sistema.
+
+### Frase da lição:
+> "Teste bom não confere só a estrada limpa. Confere também se a porteira tranca quando entra dado torto."

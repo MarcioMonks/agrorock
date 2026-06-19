@@ -2,6 +2,7 @@ from fastapi import APIRouter
 
 from app.schemas.calculators import (
     ProdutividadeSimplesInput,
+    ProdutividadeSimplesOutput,
     VolumeCaldaSimplesInput,
     QuantidadeProdutoSimplesInput,
     ConverterMetrosQuadradosParaHectaresInput,
@@ -19,7 +20,7 @@ from app.services.calculators import (
 router = APIRouter()
 
 
-@router.post("/produtividade-simples")
+@router.post("/produtividade-simples", response_model=ProdutividadeSimplesOutput)
 def post_calcular_produtividade_simples(data: ProdutividadeSimplesInput):
     return calcular_produtividade_simples(
         data.peso_total_kg, data.area_colhida_ha, data.peso_saca_kg
