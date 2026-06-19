@@ -70,3 +70,38 @@ def converter_hectares_para_metros_quadrados(hectares: float) -> dict:
     metros_quadrados = hectares * 10000
 
     return {"metros_quadrados": round(metros_quadrados, 2)}
+
+
+def listar_calculadoras_disponiveis() -> list[dict]:
+    return [
+        {
+            "nome": "Produtividade simples",
+            "rota": "/calculators/produtividade-simples",
+            "metodo": "POST",
+            "categoria": "produtividade",
+        },
+        {
+            "nome": "Volume de calda simples",
+            "rota": "/calculators/volume-calda-simples",
+            "metodo": "POST",
+            "categoria": "pulverizacao",
+        },
+        {
+            "nome": "Quantidade total de produto",
+            "rota": "/calculators/quantidade-produto-simples",
+            "metodo": "POST",
+            "categoria": "aplicacao",
+        },
+        {
+            "nome": "Conversor de m² para hectares",
+            "rota": "/calculators/converter-metros-quadrados-para-hectares",
+            "metodo": "POST",
+            "categoria": "conversao_area",
+        },
+        {
+            "nome": "Conversor de hectares para m²",
+            "rota": "/calculators/converter-hectares-para-metros-quadrados",
+            "metodo": "POST",
+            "categoria": "conversao_area",
+        },
+    ]
