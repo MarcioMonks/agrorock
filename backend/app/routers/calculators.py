@@ -11,6 +11,7 @@ from app.schemas.calculators import (
     ConverterMetrosQuadradosParaHectaresOutput,
     ConverterHectaresParaMetrosQuadradosInput,
     ConverterHectaresParaMetrosQuadradosOutput,
+    CalculadoraCatalogoOutput,
 )
 
 from app.services.calculators import (
@@ -63,7 +64,7 @@ def post_converter_hectares_para_metros_quadrados(
     return converter_hectares_para_metros_quadrados(data.hectares)
 
 
-@router.get("/")
+@router.get("/", response_model=list[CalculadoraCatalogoOutput])
 def listar_calculadoras():
     return [
         {

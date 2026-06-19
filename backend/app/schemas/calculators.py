@@ -50,3 +50,10 @@ class ConverterHectaresParaMetrosQuadradosInput(BaseModel):
 
 class ConverterHectaresParaMetrosQuadradosOutput(BaseModel):
     metros_quadrados: float
+
+
+class CalculadoraCatalogoOutput(BaseModel):
+    nome: str
+    rota: str
+    metodo: str
+    categoria: str

@@ -294,3 +294,19 @@
 
 ### Frase da lição:
 > "Nem todo endpoint é cozinha. Alguns são cardápio."
+
+## [19/06/2026] - Response model do catálogo de calculadoras
+
+### O que foi feito:
+- Criado o schema `CalculadoraCatalogoOutput`.
+- Adicionado `response_model=list[CalculadoraCatalogoOutput]` na rota `GET /calculators/`.
+- Melhorada a documentação automática do catálogo no Swagger.
+- Executado o pytest para garantir que os testes continuaram passando.
+
+### O que aprendi:
+- Entendi que endpoints que retornam listas também podem ter `response_model`.
+- Aprendi que `list[Schema]` indica uma lista de objetos seguindo aquele contrato.
+- Reforcei que a API deve documentar não só o que recebe, mas também o que devolve.
+
+### Frase da lição:
+> "Se o endpoint devolve uma lista, o contrato também precisa vir em carreta, não em caixinha."
