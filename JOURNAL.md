@@ -217,3 +217,41 @@
 
 ### Frase da lição:
 > "Teste bom não confere só a estrada limpa. Confere também se a porteira tranca quando entra dado torto."
+
+## [19/06/2026] - Schemas de saída com response_model
+
+### O que foi feito:
+- Criados schemas de saída para as calculadoras no arquivo `backend/app/schemas/calculators.py`.
+- Adicionado `response_model` nos endpoints do router de calculadoras.
+- Documentadas as respostas esperadas da API no Swagger.
+- Testados os endpoints no Swagger.
+- Executado o pytest para garantir que os testes continuaram passando.
+
+### O que aprendi:
+- Entendi que schemas de entrada definem o que a API recebe.
+- Entendi que schemas de saída definem o que a API promete devolver.
+- Aprendi que `response_model` melhora a documentação automática e ajuda a padronizar a resposta da API.
+- Reforcei que mudanças de contrato da API precisam ser acompanhadas por testes.
+
+### Frase da lição:
+> "Input confere o que entra. Output promete o que sai."
+
+
+## [19/06/2026] - Parametrização dos testes de API
+
+### O que foi feito:
+- Refatorados os testes de API das calculadoras usando `pytest.mark.parametrize`.
+- Substituídas várias funções de teste repetitivas por dois testes parametrizados:
+  - um para casos válidos, esperando status `200` e JSON correto;
+  - outro para casos inválidos, esperando status `422`.
+- Mantidos os testes de service separados.
+- Executado o pytest com sucesso, totalizando 15 testes passando.
+
+### O que aprendi:
+- Entendi que `parametrize` permite rodar a mesma função de teste com diferentes conjuntos de dados.
+- Aprendi que reduzir repetição nos testes melhora a manutenção sem reduzir cobertura.
+- Entendi que o pytest conta cada combinação parametrizada como um caso de teste.
+- Reforcei a separação entre testes de sucesso e testes de erro.
+
+### Frase da lição:
+> "`parametrize` é quando o mesmo fiscal passa em vários talhões com pranchetas diferentes."
