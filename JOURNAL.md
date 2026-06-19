@@ -176,3 +176,27 @@
 
 ### Frase da lição:
 > "Assert confere. Pytest organiza a conferência."
+
+## [18/06/2026] - Testes de API com TestClient
+
+### O que foi feito:
+- Criado o arquivo `backend/tests/test_calculators_api.py`.
+- Configurado o `TestClient` do FastAPI para testar endpoints sem precisar abrir o Swagger.
+- Criados testes automatizados para os endpoints das calculadoras:
+  - `POST /calculators/produtividade-simples`
+  - `POST /calculators/volume-calda-simples`
+  - `POST /calculators/quantidade-produto-simples`
+  - `POST /calculators/converter-metros-quadrados-para-hectares`
+  - `POST /calculators/converter-hectares-para-metros-quadrados`
+- Conferidos os códigos HTTP de sucesso (`200`).
+- Conferidas as respostas JSON esperadas.
+- Executado o pytest com sucesso, totalizando 10 testes passando.
+
+### O que aprendi:
+- Entendi que o `TestClient` permite testar a API automaticamente sem usar o navegador.
+- Aprendi a simular requisições `POST` com corpo JSON dentro dos testes.
+- Reforcei a diferença entre testar a lógica do service e testar a resposta da API.
+- Entendi que o Swagger continua útil para visualização, mas os testes automatizados dão mais segurança para evoluir o sistema.
+
+### Frase da lição:
+> "Swagger testa no olho. TestClient testa no automático."

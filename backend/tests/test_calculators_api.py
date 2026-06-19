@@ -79,3 +79,15 @@ def test_post_converter_hectares_para_metros_quadrados():
     assert response.json() == {
         "metros_quadrados": 25000,
     }
+
+
+def test_post_volume_calda_simples_com_area_zero_retorna_422():
+    response = client.post(
+        "/calculators/volume-calda-simples",
+        json={
+            "area_ha": 0,
+            "volume_calda_litros_ha": 100,
+        },
+    )
+
+    assert response.status_code == 422
