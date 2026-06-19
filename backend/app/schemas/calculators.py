@@ -20,6 +20,10 @@ class VolumeCaldaSimplesInput(BaseModel):
     )
 
 
+class VolumeCaldaSimplesOutput(BaseModel):
+    volume_total_litros: float
+
+
 class QuantidadeProdutoSimplesInput(BaseModel):
     area_ha: float = Field(gt=0, description="Área em hectares")
     dose_por_ha: float = Field(
@@ -28,9 +32,21 @@ class QuantidadeProdutoSimplesInput(BaseModel):
     )
 
 
+class QuantidadeProdutoSimplesOutput(BaseModel):
+    quantidade_total_produto: float
+
+
 class ConverterMetrosQuadradosParaHectaresInput(BaseModel):
     metros_quadrados: float = Field(gt=0, description="Área em metros quadrados")
 
 
+class ConverterMetrosQuadradosParaHectaresOutput(BaseModel):
+    hectares: float
+
+
 class ConverterHectaresParaMetrosQuadradosInput(BaseModel):
     hectares: float = Field(gt=0, description="Hectares")
+
+
+class ConverterHectaresParaMetrosQuadradosOutput(BaseModel):
+    metros_quadrados: float
