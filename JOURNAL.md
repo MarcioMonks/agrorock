@@ -154,3 +154,25 @@
 
 ### Frase da lição:
 > "Schema é a ficha de entrada. Service é a oficina. Router é a porteira."
+
+## [18/06/2026] - Configuração do pytest para calculadoras
+
+### O que foi feito:
+- Instalado o `pytest` no ambiente virtual do backend.
+- Atualizado o `requirements.txt`.
+- Criada a pasta `backend/tests`.
+- Criado o arquivo `backend/tests/test_calculators.py`.
+- Criado o arquivo `pytest.ini` para configurar o caminho de importação do projeto.
+- Migrados os testes manuais com `assert` para funções de teste reconhecidas pelo pytest.
+- Criados testes para as calculadoras de produtividade, volume de calda, quantidade total de produto e conversões de área.
+- Executado o pytest com sucesso.
+- Realizado commit e push da entrega.
+
+### O que aprendi:
+- Entendi que o pytest procura arquivos e funções de teste automaticamente quando seguem o padrão `test_`.
+- Aprendi que o arquivo `pytest.ini` pode configurar o caminho base do projeto com `pythonpath = .`.
+- Entendi que testes automatizados ajudam a garantir que as funções do service continuem funcionando após mudanças futuras.
+- Reforcei a diferença entre testar a API pelo Swagger e testar a lógica interna pelo pytest.
+
+### Frase da lição:
+> "Assert confere. Pytest organiza a conferência."
