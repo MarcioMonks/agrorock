@@ -61,3 +61,39 @@ def post_converter_hectares_para_metros_quadrados(
     data: ConverterHectaresParaMetrosQuadradosInput,
 ):
     return converter_hectares_para_metros_quadrados(data.hectares)
+
+
+@router.get("/")
+def listar_calculadoras():
+    return [
+        {
+            "nome": "Produtividade simples",
+            "rota": "/calculators/produtividade-simples",
+            "metodo": "POST",
+            "categoria": "produtividade",
+        },
+        {
+            "nome": "Volume de Calda simples",
+            "rota": "/volume-calda-simples",
+            "metodo": "POST",
+            "categoria": "produtividade",
+        },
+        {
+            "nome": "Quantidade de Produto simples",
+            "rota": "/quantidade-produto-simples",
+            "metodo": "POST",
+            "categoria": "produtividade",
+        },
+        {
+            "nome": "Converter Metros Quadrados para Hectares",
+            "rota": "/converter-metros-quadrados-para-hectares",
+            "metodo": "POST",
+            "categoria": "produtividade",
+        },
+        {
+            "nome": "Converter Hectares para Metros Quadrados",
+            "rota": "/converter-hectares-para-metros-quadrados",
+            "metodo": "POST",
+            "categoria": "produtividade",
+        },
+    ]

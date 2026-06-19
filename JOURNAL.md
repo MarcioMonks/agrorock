@@ -274,3 +274,23 @@
 
 ### Frase da lição:
 > "`args` é a sacola. `*args` entrega os itens da sacola um por um para a função."
+
+
+## [19/06/2026] - Catálogo de calculadoras
+
+### O que foi feito:
+- Criada a rota `GET /calculators/`.
+- Implementado um catálogo simples com as calculadoras disponíveis no módulo.
+- Listadas as rotas, métodos e categorias das calculadoras atuais.
+- Testada a rota no Swagger.
+- Adicionado teste automatizado para validar que o catálogo retorna uma lista com 5 calculadoras.
+- Executado o pytest com sucesso, totalizando 21 testes passando.
+
+### O que aprendi:
+- Entendi a diferença prática entre `GET` e `POST`.
+- Aprendi que nem todo endpoint precisa executar cálculo; alguns endpoints podem apenas expor informações do sistema.
+- Entendi que uma rota de catálogo pode ajudar futuramente o front-end a montar menus e telas dinamicamente.
+- Reforcei o uso de testes automatizados para validar também endpoints de consulta.
+
+### Frase da lição:
+> "Nem todo endpoint é cozinha. Alguns são cardápio."

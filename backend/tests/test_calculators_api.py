@@ -112,3 +112,10 @@ def test_calculadoras_com_valores_invalidos_retornam_422(url, payload):
     response = client.post(url, json=payload)
 
     assert response.status_code == 422
+
+
+def test_get_calculadoras_retorna_lista():
+    response = client.get("/calculators/")
+
+    assert response.status_code == 200
+    assert len(response.json()) == 5
