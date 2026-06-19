@@ -80,6 +80,7 @@ def listar_calculadoras_disponiveis() -> list[dict]:
             "metodo": "POST",
             "categoria": "produtividade",
             "descricao": "Calcula produtividade em kg/ha, t/ha e sacas/ha.",
+            "ordem": 1,
         },
         {
             "nome": "Volume de calda simples",
@@ -87,6 +88,7 @@ def listar_calculadoras_disponiveis() -> list[dict]:
             "metodo": "POST",
             "categoria": "pulverizacao",
             "descricao": "Calcula o volume total de calda a partir da área e do volume por hectare.",
+            "ordem": 2,
         },
         {
             "nome": "Quantidade total de produto",
@@ -94,6 +96,7 @@ def listar_calculadoras_disponiveis() -> list[dict]:
             "metodo": "POST",
             "categoria": "aplicacao",
             "descricao": "Calcula a quantidade total de produto a partir da área e da dose por hectare.",
+            "ordem": 3,
         },
         {
             "nome": "Conversor de m² para hectares",
@@ -101,6 +104,7 @@ def listar_calculadoras_disponiveis() -> list[dict]:
             "metodo": "POST",
             "categoria": "conversao_area",
             "descricao": "Converte uma área em metros quadrados para hectares.",
+            "ordem": 4,
         },
         {
             "nome": "Conversor de hectares para m²",
@@ -108,5 +112,6 @@ def listar_calculadoras_disponiveis() -> list[dict]:
             "metodo": "POST",
             "categoria": "conversao_area",
             "descricao": "Converte uma área em hectares para metros quadrados",
+            "ordem": 5,
         },
     ]

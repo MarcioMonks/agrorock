@@ -118,4 +118,10 @@ def test_get_calculadoras_retorna_lista():
     response = client.get("/calculators/")
 
     assert response.status_code == 200
-    assert len(response.json()) == 5
+
+    calculadoras = response.json()
+
+    assert len(calculadoras) == 5
+    assert calculadoras[0]["ordem"] == 1
+    assert calculadoras[0]["nome"] == "Produtividade simples"
+    assert "descricao" in calculadoras[0]

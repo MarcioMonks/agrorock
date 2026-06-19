@@ -329,3 +329,19 @@
 
 ### Frase da lição:
 > "Router mostra o cardápio. Service guarda o cardápio. Schema garante que ele venha legível."
+
+## [19/06/2026] - Descrições no catálogo de calculadoras
+
+### O que foi feito:
+- Adicionado o campo `descricao` ao schema `CalculadoraCatalogoOutput`.
+- Atualizada a função `listar_calculadoras_disponiveis` para retornar uma descrição para cada calculadora.
+- Melhorada a utilidade do catálogo para futura interface do NexoAgro.
+- Executado o pytest com sucesso para garantir que o contrato da API continuou válido.
+
+### O que aprendi:
+- Entendi que o catálogo não serve apenas para listar rotas, mas também para ajudar o futuro front-end a montar cards e menus.
+- Reforcei que o `response_model` protege o contrato da resposta: se o schema exige `descricao`, cada item precisa entregar esse campo.
+- Aprendi que pequenas melhorias de metadados tornam a API mais amigável para consumo.
+
+### Frase da lição:
+> "Catálogo sem descrição é placa de estrada sem destino. Funciona, mas ninguém sabe pra onde vai."

@@ -58,3 +58,4 @@ class CalculadoraCatalogoOutput(BaseModel):
     metodo: str
     categoria: str
     descricao: str
+    ordem: int
