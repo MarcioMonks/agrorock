@@ -310,3 +310,22 @@
 
 ### Frase da lição:
 > "Se o endpoint devolve uma lista, o contrato também precisa vir em carreta, não em caixinha."
+
+
+## [19/06/2026] - Catálogo de calculadoras movido para o service
+
+### O que foi feito:
+- Criada a função `listar_calculadoras_disponiveis` no service de calculadoras.
+- Movido o conteúdo do catálogo de calculadoras para o service.
+- Mantida a rota `GET /calculators/` no router, agora apenas chamando o service.
+- Mantido o schema de saída `CalculadoraCatalogoOutput`.
+- Executado o pytest com sucesso, totalizando 21 testes passando.
+
+### O que aprendi:
+- Entendi que o router deve expor rotas, não carregar regras ou dados do produto.
+- Reforcei que o service concentra a lógica e o conteúdo de negócio.
+- Entendi que o schema define o formato da resposta, mesmo quando os dados vêm do service.
+- Aprendi que uma boa refatoração melhora a organização sem alterar o comportamento externo da API.
+
+### Frase da lição:
+> "Router mostra o cardápio. Service guarda o cardápio. Schema garante que ele venha legível."

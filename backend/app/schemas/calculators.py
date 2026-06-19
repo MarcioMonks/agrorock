@@ -57,3 +57,4 @@ class CalculadoraCatalogoOutput(BaseModel):
     rota: str
     metodo: str
     categoria: str
+    descricao: str
