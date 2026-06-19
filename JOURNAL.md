@@ -133,3 +133,24 @@
 
 ### Frase da lição:
 > "Hectare entra, metro quadrado sai. A chave do retorno tem que contar o que saiu da máquina."
+
+
+## [18/06/2026] - Separação dos Schemas de Calculadoras
+
+### O que foi feito:
+- Criada a pasta `backend/app/schemas`.
+- Criado o arquivo `backend/app/schemas/calculators.py`.
+- Movidos os modelos Pydantic de entrada das calculadoras para o arquivo de schemas.
+- Mantidos os services responsáveis apenas pela lógica de cálculo.
+- Mantido o router responsável apenas por expor os endpoints e conectar schemas aos services.
+- Testadas as rotas no Swagger após a refatoração.
+
+### O que aprendi:
+- Entendi que schemas representam contratos de entrada e saída de dados.
+- Entendi que services não devem depender de schemas nem de FastAPI.
+- Entendi que routers podem importar schemas e services para conectar a API à regra de negócio.
+- Reforcei a ideia de separação de responsabilidades.
+- Aprendi que refatoração boa muda a organização interna sem quebrar o comportamento externo.
+
+### Frase da lição:
+> "Schema é a ficha de entrada. Service é a oficina. Router é a porteira."
