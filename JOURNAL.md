@@ -345,3 +345,21 @@
 
 ### Frase da lição:
 > "Catálogo sem descrição é placa de estrada sem destino. Funciona, mas ninguém sabe pra onde vai."
+
+## [19/06/2026] - Ordem no catálogo de calculadoras
+
+### O que foi feito:
+- Adicionado o campo `ordem` ao schema `CalculadoraCatalogoOutput`.
+- Atualizada a função `listar_calculadoras_disponiveis` para retornar a ordem de exibição de cada calculadora.
+- Melhorado o teste do catálogo para verificar quantidade de itens, ordem, nome e presença de descrição.
+- Executado o pytest com sucesso.
+- Conferido o retorno no Swagger.
+
+### O que aprendi:
+- Entendi que o catálogo também carrega metadados úteis para o futuro front-end.
+- Aprendi que a API pode orientar a ordem de exibição dos cards sem o front-end precisar adivinhar.
+- Reforcei que pequenas mudanças no contrato da API devem ser acompanhadas por teste.
+- Reforcei a ideia de preparar o back-end para o Márcio do front-end consumir depois com menos sofrimento.
+
+### Frase da lição:
+> "Catálogo com ordem é cardápio pronto para virar tela. O front-end não precisa adivinhar a fila do trator."

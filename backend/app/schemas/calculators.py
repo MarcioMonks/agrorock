@@ -53,6 +53,7 @@ class ConverterHectaresParaMetrosQuadradosOutput(BaseModel):
 
 
 class CalculadoraCatalogoOutput(BaseModel):
+    codigo: str
     nome: str
     rota: str
     metodo: str

@@ -123,5 +123,6 @@ def test_get_calculadoras_retorna_lista():
 
     assert len(calculadoras) == 5
     assert calculadoras[0]["ordem"] == 1
+    assert calculadoras[0]["codigo"] == "produtividade_simples"
     assert calculadoras[0]["nome"] == "Produtividade simples"
     assert "descricao" in calculadoras[0]

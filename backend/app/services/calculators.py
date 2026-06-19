@@ -75,6 +75,7 @@ def converter_hectares_para_metros_quadrados(hectares: float) -> dict:
 def listar_calculadoras_disponiveis() -> list[dict]:
     return [
         {
+            "codigo": "produtividade_simples",
             "nome": "Produtividade simples",
             "rota": "/calculators/produtividade-simples",
             "metodo": "POST",
@@ -83,6 +84,7 @@ def listar_calculadoras_disponiveis() -> list[dict]:
             "ordem": 1,
         },
         {
+            "codigo": "volume_calda_simples",
             "nome": "Volume de calda simples",
             "rota": "/calculators/volume-calda-simples",
             "metodo": "POST",
@@ -91,6 +93,7 @@ def listar_calculadoras_disponiveis() -> list[dict]:
             "ordem": 2,
         },
         {
+            "codigo": "quantidade_produto_simples",
             "nome": "Quantidade total de produto",
             "rota": "/calculators/quantidade-produto-simples",
             "metodo": "POST",
@@ -99,6 +102,7 @@ def listar_calculadoras_disponiveis() -> list[dict]:
             "ordem": 3,
         },
         {
+            "codigo": "converter_metros_quadrados_para_hectares",
             "nome": "Conversor de m² para hectares",
             "rota": "/calculators/converter-metros-quadrados-para-hectares",
             "metodo": "POST",
@@ -107,6 +111,7 @@ def listar_calculadoras_disponiveis() -> list[dict]:
             "ordem": 4,
         },
         {
+            "codigo": "converter_hectares_para_metros_quadrados",
             "nome": "Conversor de hectares para m²",
             "rota": "/calculators/converter-hectares-para-metros-quadrados",
             "metodo": "POST",
