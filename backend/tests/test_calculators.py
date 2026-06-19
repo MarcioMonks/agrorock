@@ -1,3 +1,5 @@
+import pytest
+
 from app.services.calculators import (
     calcular_produtividade_simples,
     calcular_volume_calda_simples,
@@ -7,33 +9,65 @@ from app.services.calculators import (
 )
 
 
-def test_calcular_produtividade_simples():
-    resultado = calcular_produtividade_simples(18500, 3.7, 60)
+@pytest.mark.parametrize(
+    "funcao, args, resultado_esperado",
+    [
+        (
+            calcular_produtividade_simples,
+            (18500, 3.7, 60),
+            {
+                "kg_ha": 5000.0,
+                "t_ha": 5.0,
+                "sacas_ha": 83.33,
+            },
+        ),
+        (
+            calcular_volume_calda_simples,
+            (150, 100),
+            {
+                "volume_total_litros": 15000,
+            },
+        ),
+        (
+            calcular_quantidade_produto_simples,
+            (25, 2),
+            {
+                "quantidade_total_produto": 50,
+            },
+        ),
+        (
+            converter_metros_quadrados_para_hectares,
+            (25000,),
+            {
+                "hectares": 2.5,
+            },
+        ),
+        (
+            converter_hectares_para_metros_quadrados,
+            (2.5,),
+            {
+                "metros_quadrados": 25000,
+            },
+        ),
+    ],
+)
+def test_calculadoras_com_valores_validos(funcao, args, resultado_esperado):
+    resultado = funcao(*args)
 
-    assert resultado["kg_ha"] == 5000.0
-    assert resultado["t_ha"] == 5.0
-    assert resultado["sacas_ha"] == 83.33
+    assert resultado == resultado_esperado
 
 
-def test_calcular_volume_calda_simples():
-    resultado = calcular_volume_calda_simples(150, 100)
+@pytest.mark.parametrize(
+    "funcao, args",
+    [
+        (calcular_produtividade_simples, (0, 3.7, 60)),
+        (calcular_volume_calda_simples, (0, 100)),
+        (calcular_quantidade_produto_simples, (25, 0)),
+        (converter_metros_quadrados_para_hectares, (0,)),
+        (converter_hectares_para_metros_quadrados, (0,)),
+    ],
+)
+def test_calculadoras_com_valores_invalidos_retornam_erro(funcao, args):
+    resultado = funcao(*args)
 
-    assert resultado["volume_total_litros"] == 15000
-
-
-def test_calcular_quantidade_produto_simples():
-    resultado = calcular_quantidade_produto_simples(25, 2)
-
-    assert resultado["quantidade_total_produto"] == 50
-
-
-def test_converter_metros_quadrados_para_hectares():
-    resultado = converter_metros_quadrados_para_hectares(25000)
-
-    assert resultado["hectares"] == 2.5
-
-
-def test_converter_hectares_para_metros_quadrados():
-    resultado = converter_hectares_para_metros_quadrados(2.5)
-
-    assert resultado["metros_quadrados"] == 25000
+    assert "erro" in resultado

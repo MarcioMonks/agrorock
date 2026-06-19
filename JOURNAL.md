@@ -255,3 +255,22 @@
 
 ### Frase da lição:
 > "`parametrize` é quando o mesmo fiscal passa em vários talhões com pranchetas diferentes."
+
+## [19/06/2026] - Parametrização dos testes de service
+
+### O que foi feito:
+- Refatorados os testes das funções do service usando `pytest.mark.parametrize`.
+- Substituídas funções de teste repetitivas por testes parametrizados.
+- Criado um teste parametrizado para entradas válidas das calculadoras.
+- Criado um teste parametrizado para entradas inválidas das calculadoras.
+- Mantidos testes separados para service e API.
+- Executado o pytest com sucesso, totalizando 20 testes passando.
+
+### O que aprendi:
+- Entendi que o mesmo padrão de parametrização usado nos testes de API também pode ser aplicado aos testes do service.
+- Aprendi a usar `*args` para desempacotar argumentos e chamar funções diferentes dentro do mesmo teste.
+- Reforcei que testes válidos verificam o resultado esperado e testes inválidos verificam se a função retorna erro.
+- Entendi que parametrizar reduz repetição sem reduzir cobertura.
+
+### Frase da lição:
+> "`args` é a sacola. `*args` entrega os itens da sacola um por um para a função."
