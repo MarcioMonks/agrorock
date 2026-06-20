@@ -121,8 +121,14 @@ def test_get_calculadoras_retorna_lista():
 
     calculadoras = response.json()
 
+    codigos = [calculadora["codigo"] for calculadora in calculadoras]
+
     assert len(calculadoras) == 5
     assert calculadoras[0]["ordem"] == 1
     assert calculadoras[0]["codigo"] == "produtividade_simples"
     assert calculadoras[0]["nome"] == "Produtividade simples"
+
+    assert "converter_m2_para_ha" in codigos
+    assert "converter_ha_para_m2" in codigos
+
     assert "descricao" in calculadoras[0]

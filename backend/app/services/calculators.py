@@ -102,7 +102,7 @@ def listar_calculadoras_disponiveis() -> list[dict]:
             "ordem": 3,
         },
         {
-            "codigo": "converter_metros_quadrados_para_hectares",
+            "codigo": "converter_m2_para_ha",
             "nome": "Conversor de m² para hectares",
             "rota": "/calculators/converter-metros-quadrados-para-hectares",
             "metodo": "POST",
@@ -111,7 +111,7 @@ def listar_calculadoras_disponiveis() -> list[dict]:
             "ordem": 4,
         },
         {
-            "codigo": "converter_hectares_para_metros_quadrados",
+            "codigo": "converter_ha_para_m2",
             "nome": "Conversor de hectares para m²",
             "rota": "/calculators/converter-hectares-para-metros-quadrados",
             "metodo": "POST",
