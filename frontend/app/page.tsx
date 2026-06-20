@@ -3,7 +3,7 @@ export default function Home() {
     <main className="min-h-screen bg-zinc-950 text-zinc-100">
       <section className="mx-auto flex min-h-screen max-w-5xl flex-col justify-center px-6 py-16">
         <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-emerald-400">
-          AgroRock
+          NexoAgro
         </p>
 
         <h1 className="max-w-3xl text-4xl font-bold tracking-tight sm:text-6xl">
@@ -11,7 +11,7 @@ export default function Home() {
         </h1>
 
         <p className="mt-6 max-w-2xl text-lg leading-8 text-zinc-300">
-          O AgroRock organiza dados, cálculos e informações de campo para ajudar
+          O NexoAgro organiza dados, cálculos e informações de campo para ajudar
           o agrônomo a decidir melhor.
         </p>
 

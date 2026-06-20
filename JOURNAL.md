@@ -381,3 +381,21 @@
 
 ### Frase da lição:
 > "Código de catálogo é etiqueta de prateleira. Tem que ser curto, estável e fácil de achar depois."
+
+## [19/06/2026] - Primeira página do front-end
+
+### O que foi feito:
+- Criado o projeto front-end com Next.js dentro da pasta `frontend`.
+- Substituída a tela padrão do Next.js por uma página inicial do AgroRock.
+- Criada uma home simples apresentando o sistema como apoio à Engenharia Agronômica.
+- Listados os módulos iniciais previstos: calculadoras agronômicas, diário técnico, propriedades/talhões e relatórios.
+- Testada a aplicação em `http://localhost:3000`.
+
+### O que aprendi:
+- Entendi que o front-end do projeto ficará separado do back-end, dentro da pasta `frontend`.
+- Aprendi a rodar o servidor de desenvolvimento do Next.js com `npm run dev`.
+- Entendi que a página inicial do App Router fica em `frontend/src/app/page.tsx`.
+- Dei o primeiro passo para transformar a API em uma interface utilizável.
+
+### Frase da lição:
+> "Back-end é a oficina. Front-end é o balcão."
