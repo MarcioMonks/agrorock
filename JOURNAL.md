@@ -363,3 +363,21 @@
 
 ### Frase da lição:
 > "Catálogo com ordem é cardápio pronto para virar tela. O front-end não precisa adivinhar a fila do trator."
+
+## [19/06/2026] - Padronização dos códigos do catálogo de calculadoras
+
+### O que foi feito:
+- Revisados e padronizados os códigos das calculadoras no catálogo.
+- Mantidos nomes, rotas, funções e endpoints sem alteração.
+- Atualizado o teste do catálogo para verificar os códigos padronizados.
+- Executado o pytest com sucesso.
+- Realizado commit e push da entrega.
+
+### O que aprendi:
+- Entendi que o campo `codigo` funciona como identificador técnico estável.
+- Aprendi que nomes exibidos ao usuário podem mudar, mas códigos internos devem ser mais estáveis.
+- Reforcei que ajustes de contrato precisam ser acompanhados por testes.
+- Preparei melhor o catálogo para ser consumido pelo futuro front-end.
+
+### Frase da lição:
+> "Código de catálogo é etiqueta de prateleira. Tem que ser curto, estável e fácil de achar depois."
