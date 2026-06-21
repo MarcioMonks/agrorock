@@ -399,3 +399,42 @@
 
 ### Frase da lição:
 > "Back-end é a oficina. Front-end é o balcão."
+
+## [19/06/2026] - Página de calculadoras no front-end
+
+### O que foi feito:
+- Criada a rota `/calculadoras` no front-end com Next.js.
+- Criada a página `frontend/src/app/calculadoras/page.tsx`.
+- Adicionados cards estáticos para as calculadoras existentes no back-end.
+- Usado `map()` para transformar uma lista de calculadoras em cards na tela.
+- Testada a página em `http://localhost:3000/calculadoras`.
+
+### O que aprendi:
+- Entendi que, no App Router do Next.js, uma pasta dentro de `src/app` vira uma rota.
+- Aprendi que `page.tsx` representa a página principal daquela rota.
+- Reforcei o uso de listas para gerar elementos visuais dinamicamente.
+- Entendi que o front-end começou estático, mas já foi desenhado com base no catálogo real da API.
+
+### Frase da lição:
+> "Lista no código vira card na tela. O front-end começou a enxergar o catálogo."
+
+## Frontend — Bancada inicial de calculadoras
+
+Criamos a primeira interface funcional do módulo de calculadoras do AgroRock.
+
+A tela `/calculadoras` deixou de ser apenas uma página estática e passou a usar conceitos fundamentais de Next.js e React:
+
+- rota criada pelo App Router com `src/app/calculadoras/page.tsx`;
+- componente de página em TSX;
+- layout com Tailwind CSS;
+- identidade visual inicial com fundo oliva musgo queimado e painéis em papel técnico;
+- lista estática de calculadoras usando array de objetos;
+- criação dinâmica do menu lateral com `map()`;
+- uso de `key` com `codigo`;
+- primeiro uso de estado com `useState`;
+- seleção de calculadora pelo menu lateral;
+- atualização dinâmica do título e da descrição no painel principal.
+
+Decisão visual registrada: o AgroRock deve parecer uma bancada agronômica sofisticada, funcional e confortável para uso prolongado — não uma landing page, não um portfólio dev e não um agro caricato.
+
+Próximo passo: destacar visualmente o botão ativo no menu lateral e, depois, transformar os campos visuais em inputs reais.
